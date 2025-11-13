@@ -1,0 +1,287 @@
+/* ====== ESTILO GERAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #072a78 0%, #0a3d91 100%);
+  color: #f5f7ff;
+  overflow-x: hidden;
+}
+
+header {
+  background: rgba(5, 44, 110, 0.95);
+  padding: 25px 0;
+  font-size: 2.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeDown 1s ease-out;
+}
+
+/* ====== CARROSSEL ====== */
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeUp 1s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: none;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.carousel img.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2.2em;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* ====== SEÇÕES ====== */
+section {
+  max-width: 900px;
+  margin: 70px auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s, box-shadow 0.5s;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+section p {
+  color: #dbe6ff;
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+/* ====== CARDS ====== */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.feature {
+  background: linear-gradient(145deg, #0d48b0, #092c7e);
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.feature:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== MAPA ====== */
+.mapa iframe {
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* ====== FORMULÁRIO ====== */
+.contato input,
+.contato textarea {
+  width: 90%;
+  max-width: 550px;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #1a73e8;
+}
+
+.contato button {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.contato button:hover {
+  background-color: #1eb253;
+  transform: scale(1.05);
+}
+
+/* ====== SPINNER ====== */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+button.loading .btn-text {
+  opacity: 0.6;
+}
+
+button.loading .spinner {
+  display: inline-block;
+}
+
+/* ====== WHATSAPP FIXO ====== */
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  font-size: 1.6em;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.95em;
+  color: #d0dcff;
+}
+
+/* ====== PÁGINA DE SUCESSO ====== */
+.sucesso-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(160deg, #0a3d91, #001c58);
+  color: white;
+  text-align: center;
+  animation: fadeUp 1s ease-out;
+}
+
+.sucesso-container a {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.sucesso-container a:hover {
+  background-color: #1eb253;
+  transform: scale(1.05);
+}
+
+/* ====== ANIMAÇÕES ====== */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== EFEITO SCROLL REVEAL ====== */
+section, .feature {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+section.show, .feature.show {
+  opacity: 1;
+  transform: translateY(0);
+}
