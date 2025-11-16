@@ -1,90 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Óticas Majur</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Óticas Majur — Seu olhar merece o melhor</title>
+  <meta name="description" content="Óticas Majur — Lentes, armações e exames de visão com tecnologia e estilo. Seu olhar merece o melhor." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Óticas Majur",
+    "description": "Óticas Majur — Lentes, armações e exames de visão. Seu olhar merece o melhor.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Cap. Teixeira, 436",
+      "addressLocality": "Realengo",
+      "addressRegion": "RJ",
+      "postalCode": "21755-000",
+      "addressCountry": "BR"
+    },
+    "telephone": "+5521999999999"
+  }
+  </script>
 </head>
 <body>
-  <header>Óticas Majur</header>
-
-  <!-- Carrossel -->
-  <div class="carousel">
-    <button class="button prev">&#10094;</button>
-    <button class="button next">&#10095;</button>
-
-    <img src="https://images.unsplash.com/photo-1589820296156-2454bb8a6c58" class="active" alt="Óculos 1">
-    <img src="https://images.unsplash.com/photo-1589461564823-85a4bff84b09" alt="Óculos 2">
-    <img src="https://images.unsplash.com/photo-1589461577728-71cde21d9867" alt="Óculos 3">
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Óculos 4">
-  </div>
-
-  <!-- Sobre -->
-  <section>
-    <h2>Enxergue o mundo com mais estilo</h2>
-    <p>
-      Na <strong>Óticas Majur</strong>, oferecemos tecnologia e elegância para realçar sua visão.
-      Trabalhamos com armações modernas, lentes de alta performance e um atendimento personalizado
-      para você enxergar a vida com mais clareza e confiança.
-    </p>
-
-    <div class="features">
-      <div class="feature">
-        <h3>Lentes Digitais</h3>
-        <p>Lentes com proteção contra luz azul e nitidez impecável.</p>
+  <!-- ====== NAV / HEADER ====== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="logo" aria-label="Óticas M">
+        <span class="logo-mark">OM</span>
+        <div class="logo-text">
+          <span class="brand">Óticas <strong>M</strong></span>
+          <small class="slogan">Seu olhar merece o melhor</small>
+        </div>
       </div>
-      <div class="feature">
-        <h3>Estilo e Conforto</h3>
-        <p>Armações modernas que combinam com seu rosto e seu estilo.</p>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#exames">Exames</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+          <li><a href="#contato" class="cta">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== HERO / CARROSSEL FULL-WIDTH ====== -->
+  <section id="home" class="hero">
+    <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Destaques">
+      <button class="carousel-btn prev" aria-label="Slide anterior">&#10094;</button>
+      <button class="carousel-btn next" aria-label="Próximo slide">&#10095;</button>
+
+      <div class="slides">
+        <!-- imagens profissionais de exemplo (troque se quiser) -->
+        <img data-src="https://blog.kessy.com.br/wp-content/uploads/2023/08/Quem-tem-miopia-precisa-usar-oculos-o-tempo-todo_Thumb5-1.jpg" alt="Óculos modernos — destaque" class="slide active" loading="lazy">
+        <img data-src="https://blog.livo.com.br/wp-content/uploads/2023/05/modelos-oculos-livo-1329x1080.jpg" alt="Model usando óculos stylish" class="slide" loading="lazy">
+        <img data-src="https://blog.livo.com.br/wp-content/uploads/2023/04/NORA_GRAU_DEMI_AMARELO_1_8933-1581x1080.jpg" alt="Coleção de armações" class="slide" loading="lazy">
       </div>
-      <div class="feature">
-        <h3>Exames de Visão</h3>
-        <p>Agende seu exame com nossos especialistas e cuide da sua visão.</p>
+
+      <div class="carousel-indicators" aria-hidden="false"></div>
+
+      <div class="hero-cta container">
+        <h1>Encontre seu estilo em cada olhar</h1>
+        <p class="lead">Armações modernas, lentes de alta performance e atendimento personalizado.</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="#produtos">Ver coleção</a>
+          <a class="btn btn-ghost" href="#exames">Agendar exame</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Localização -->
-  <section class="mapa">
-    <h2>📍 Nossa Localização</h2>
-    <p>Venha nos visitar e descubra o melhor em qualidade e estilo!</p>
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.075955082182!2d-43.1858191!3d-22.9035399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e9a8f97e1%3A0x4f343c12dbf0f1a9!2sRio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4v1696354472140!5m2!1spt-BR!2sbr"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
-  </section>
+  <!-- ====== SEÇÕES PRINCIPAIS ====== -->
+  <main>
+    <section id="produtos" class="section container">
+      <h2 class="section-title">Coleção em destaque</h2>
+      <p class="section-sub">Seleção de armações e lentes pensadas para conforto, design e performance.</p>
 
-  <!-- Contato -->
-  <section class="contato">
-    <h2>📬 Fale Conosco</h2>
-    <p>Preencha o formulário abaixo e entraremos em contato com você.</p>
+      <div class="grid features">
+        <article class="card">
+          <img src="https://img.odcdn.com.br/wp-content/uploads/2023/01/Oculos-inteligentes.jpg" alt="Lentes digitais" loading="lazy">
+          <h3>Lentes digitais</h3>
+          <p>Proteção contra luz azul, nitidez e conforto visual para o dia a dia.</p>
+        </article>
 
-    <form action="https://formsubmit.co/SEU_EMAIL_AQUI" method="POST" id="contatoForm">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        <article class="card">
+          <img src="https://image.lensmartonline.com/2021-12-13/16393811362546.jpg?imageView2/2/interlace/1/ignore-error/1/w/1680" alt="Armações" loading="lazy">
+          <h3>Armações premium</h3>
+          <p>Modelos para todos os estilos — do clássico ao contemporâneo.</p>
+        </article>
 
-      <!-- Configurações FormSubmit -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="sucesso.html">
+        <article class="card">
+          <img src="https://paris-miki.vn/uploads/images/can-thi-o-mat(11).png" alt="Exames de visão" loading="lazy">
+          <h3>Exames completos</h3>
+          <p>Equipe treinada para atendimento cuidadoso e resultados precisos.</p>
+        </article>
+      </div>
+    </section>
 
-      <button type="submit" id="enviarBtn">
-        <span class="btn-text">Enviar mensagem</span>
-        <span class="spinner"></span>
-      </button>
-    </form>
-  </section>
+    <section id="exames" class="section alt">
+      <div class="container split">
+        <div class="split-left">
+          <h2>Exames de visão</h2>
+          <p>Agende seu exame com equipamentos modernos. Ajudamos você a entender a necessidade da sua visão e a melhor solução em lentes.</p>
+          <ul class="checklist">
+            <li>Exame completo de acuidade</li>
+            <li>Teste de lentes e adaptação</li>
+            <li>Orientação personalizada</li>
+          </ul>
+          <a href="#contato" class="btn btn-primary">Agende agora</a>
+        </div>
+        <div class="split-right">
+          <img src="https://medportal.ru/pictures/article/17fe3f61-a37f-407c-b72f-5afe21395882/medium.webp" alt="Exame de visão" loading="lazy">
+        </div>
+      </div>
+    </section>
 
-  <footer>© 2025 Óticas Majur — Todos os direitos reservados.</footer>
+    <!-- MAPA + CARD -->
+    <section id="localizacao" class="section container">
+      <h2 class="section-title">📍 Nossa Localização</h2>
+      <p class="section-sub">Visite nossa loja em Rio de Janeiro — venha conhecer nossa coleção e equipe.</p>
 
-  <!-- Botão de WhatsApp -->
-  <a href="https://wa.me/5521999999999" class="whatsapp" target="_blank" title="Fale conosco no WhatsApp">
-    💬
+      <div class="map-card">
+        <div class="map-info">
+          <h3>Óticas M — Rio de Janeiro</h3>
+          <p>R. Rio de Janeiro, 1000 — Rio de Janeiro, Rio de Janeiro — RJ</p>
+          <p><strong>Horário:</strong> Seg–Sex 09:00–18:00 • Sáb 09:00–13:00</p>
+          <p><strong>Contato:</strong> <a href="tel:+5521999999999">(21) 999999999</a></p>
+          <div class="button-row">
+            <a class="btn btn-outline" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470398.54328799434!2d-43.77565735610141!3d-22.913790605599377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bde559108a05b%3A0x50dc426c672fd24e!2sRio%20de%20Janeiro%2C%20RJ!5e0!3m2!1spt-PT!2sbr!4v1763299669192!5m2!1spt-PT!2sbr" target="_blank" rel="noopener">Abrir no Google Maps</a>
+            <a class="btn btn-primary" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470398.54328799434!2d-43.77565735610141!3d-22.913790605599377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bde559108a05b%3A0x50dc426c672fd24e!2sRio%20de%20Janeiro%2C%20RJ!5e0!3m2!1spt-PT!2sbr!4v1763299669192!5m2!1spt-PT!2sbr" target="_blank" rel="noopener">Traçar rota</a>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <div class="responsive-iframe">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470398.54328799434!2d-43.77565735610141!3d-22.913790605599377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bde559108a05b%3A0x50dc426c672fd24e!2sRio%20de%20Janeiro%2C%20RJ!5e0!3m2!1spt-PT!2sbr!4v1763299669192!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section alt">
+      <div class="container contact-wrap">
+        <div class="contact-form">
+          <h2>📬 Fale Conosco</h2>
+          <p>Preencha e nossa equipe entrará em contato o mais rápido possível.</p>
+
+          <form id="contactForm" action="https://formsubmit.co/MEUEMAIL.com" method="POST" novalidate>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="sucesso.html">
+
+            <div class="field-row">
+              <input type="text" name="nome" placeholder="Seu nome" required>
+              <input type="tel" name="telefone" placeholder="Telefone (opcional)">
+            </div>
+
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+
+            <button type="submit" id="enviarBtn" class="btn btn-primary">
+              <span class="btn-text">Enviar mensagem</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-aside">
+          <div class="aside-card">
+            <h3>Atendimento</h3>
+            <p>Seg–Sex: 09h–18h<br>Sáb: 09h–14h</p>
+            <p><strong>Endereço:</strong><br>R. Rio de Janeiro, 1000 — Rio de Janeiro</p>
+            <a href="tel:+5521999999999" class="btn btn-outline">Ligar agora</a>
+          </div>
+
+          <div class="trust">
+            <h4>Formas de pagamento</h4>
+            <div class="payments">
+              <span class="chip">Cartão</span>
+              <span class="chip">Pix</span>
+              <span class="chip">Boleto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== WHATSAPP FLUTUANTE ====== -->
+  <a href="https://wa.me/5521999999999" class="whatsapp" aria-label="Abrir WhatsApp" target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.672.149-.198.297-.767.967-.941 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.148-.672-1.611-.922-2.206-.243-.579-.49-.5-.672-.51l-.573-.01c-.198 0-.52.075-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487 2.982 1.289 2.982.86 3.52.806.539-.05 1.758-.718 2.006-1.411.248-.694.248-1.289.173-1.411-.074-.123-.272-.198-.57-.347z"/></svg>
   </a>
 
-  <script src="script.js"></script>
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>Óticas M</strong>
+        <small>Seu olhar merece o melhor</small>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="#produtos">Produtos</a>
+          <a href="#exames">Exames</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <small>© 2025 Óticas M — Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="script.js"></script>
 </body>
 </html>
